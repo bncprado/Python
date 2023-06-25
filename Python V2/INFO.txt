@@ -1,0 +1,111 @@
+I asked chatGPT on how to learn python in 100 steps. 
+Here's what it gave me
+
+Learning Python in 100 lessons is possible, but it would require a lot of dedication and hard work on your part. Here is a rough outline of a possible learning path:
+
+Lesson 1-5: Introduction to Python and Programming Concepts
+- Install Python and a code editor
+- Variables, data types, and basic operations
+- Control structures: if/else statements, loops
+- Functions and parameters
+- Lists and dictionaries
+
+Lesson 6-10: Object-Oriented Programming (OOP)
+- Classes and objects
+- Encapsulation, inheritance, and polymorphism
+- Advanced topics: decorators, generators, context managers
+
+Lesson 11-15: File I/O and Exception Handling
+- Reading and writing files
+- Exceptions and error handling
+- Regular expressions
+
+Lesson 16-20: Web Development with Python
+- Web frameworks: Flask, Django
+- HTML, CSS, and templates
+- Web forms and user input
+- Databases and SQL
+
+Lesson 21-25: Data Science with Python
+- NumPy and arrays
+- Pandas and dataframes
+- Visualization with Matplotlib and Seaborn
+- Machine learning basics
+
+Lesson 26-30: Advanced Python Topics
+- Concurrency and parallelism: threads, processes, asyncio
+- Networking: sockets, HTTP, REST APIs
+- Debugging and profiling
+- Testing and test-driven development
+
+Lesson 31-35: Advanced Data Science Topics
+- Machine learning algorithms: regression, classification, clustering
+- Deep learning and neural networks
+- Natural language processing (NLP)
+- Big data and distributed computing with PySpark
+
+Lesson 36-40: Web Scraping and Automation
+- Requests and BeautifulSoup
+- Selenium and web automation
+- APIs and webhooks
+- Building a web crawler or a chatbot
+
+Lesson 41-45: Game Development with Python
+- Pygame and game loops
+- Sprites and collision detection
+- Animation and sound effects
+- Building a simple game from scratch
+
+Lesson 46-50: GUI Development with Python
+- Tkinter and GUI programming basics
+- Building desktop applications
+- Handling user input and events
+- Styling and layout design
+
+Lesson 51-55: Web Scraping and Automation II
+- Scrapy and spider development
+- XPath and CSS selectors
+- Data extraction and storage
+- Advanced topics: dynamic websites, CAPTCHAs, IP rotation
+
+Lesson 56-60: Web Development II
+- Authentication and authorization
+- RESTful APIs and web services
+- Websockets and real-time communication
+- Deployment and hosting
+
+Lesson 61-65: Mobile App Development with Python
+- Kivy and mobile UI design
+- Touch events and gestures
+- Sensors and device APIs
+- Building a simple app from scratch
+
+Lesson 66-70: Raspberry Pi and IoT
+- Raspberry Pi and hardware setup
+- GPIO and sensors
+- MQTT and IoT protocols
+- Building a smart home or a robot
+
+Lesson 71-75: Web Development III
+- Single-page applications and front-end frameworks
+- React and Vue.js integration with Python
+- Progressive web apps and offline support
+- Serverless and cloud functions
+
+Lesson 76-80: Data Science III
+- Feature engineering and selection
+- Model evaluation and validation
+- Hyperparameter tuning and optimization
+- Deep learning frameworks: TensorFlow, PyTorch
+
+Lesson 81-85: Game Development II
+- 3D graphics and OpenGL
+- Physics engines and collision detection
+- Multiplayer networking and online games
+- Building a complex game from scratch
+
+Lesson 86-90: Security and Ethical Hacking with Python
+- Cryptography and encryption
+- Network security and sniffing
+- Exploits and vulnerabilities
+- Building
