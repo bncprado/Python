@@ -81,4 +81,61 @@
 
 # #-----------------------------------------------------------------------------
 
+# """
+# LOGICAL OPERATORS
 
+# Logical operators are symbols or words that connect two or more expressions. They evaluate both conditions on either side, and generate one output from it.
+
+# EX:
+# expression_to_be_evaluated logicaloperator expression_to_be_evaluated
+
+# """
+
+# place = "MCR"
+# weather = "Cloudy"
+
+# if place == "MCR" and weather == "Sunny":
+#     print ("Check again")
+# elif place == "MCR" and weather == "Rain":
+#     print ("Obvs")
+# else:
+#     print ("What? Isn't it raining?")
+
+# """
+# The expressions either side of the logical operator are evaluated 
+
+# Because we're using "and", either side needs to evaluate to be True to run
+
+# The "place" variable matches “MCR”, but weather doesn't match in either condition. So the "else" statement will run.
+
+# "and" allows us to write strict conditions that rely on more than one comparison. For example, you must get your username and your password correct to log in.
+# """
+
+# #---------------------------------------------------------------------------
+
+# day = "Saturday"
+
+# if day == "Saturday" or day == "Sunday":
+#     print("It's the weekend")
+# else:
+#     print("When is the weekend?")
+
+# """
+# The "or" logical operator evaluates if only one condition is True. If at least one matches, it will run the code.
+
+# It allows us to have two or more options to trigger the same condition. And is much more efficient than writing out the same elif statement again and again.
+# """
+
+# #---------------------------------------------------------------------------
+
+"""
+LOGICAL OPERATOR "and":
+True and True = True
+True and False = False
+False and False = False
+
+LOGICAL OPERATOR "or":
+True and True = True
+True and False = True
+False and False = False
+"""
