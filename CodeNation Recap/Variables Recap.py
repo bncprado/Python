@@ -20,4 +20,19 @@
 
 # #-------------------------------------------------------------------------
 
+"""
+ARITHMETIC OPERATORS
++   Addition
+-   Subtraction
+*   Multiplication
+**  Exponential
+/   Division
+%   Modulo (Remainder)
+"""
+print(1+2)
+print(10-4)
+print(4*6)
+print(3**3)
+print(15/5)
+print(15%4)
 
