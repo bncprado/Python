@@ -119,12 +119,55 @@
 
 # #----------------------------------------------------------------------------------------------------------------------
 
-""" EXERCISE
-Using range, find the total of adding the numbers 1 - 100
-"""
-total = 0
+# """ EXERCISE
+# Using range, find the total of adding the numbers 1 - 100
+# """
+# total = 0
 
-for i in range(101):
-  total = total + i
-  print(total)
+# for i in range(101):
+#   total = total + i
+#   print(total)
+
+# #----------------------------------------------------------------------------------------------------------------------
+
+# ITERATION IN CODING - While
+
+"""
+A for loop runs a finite amount of times. It might loop a lot, but it will always stop when it runs out of things to sequence through.
+
+What can we do when we don't know how many times something will take? Like matching random numbers, or waiting for a user to give the correct input?
+
+A for loop won't work for that, but we can use a while loop.
+
+A while loop will run infinitely and do its job until a condition is met.
+
+"""
+
+answer = input("Who ordered a cortado? ")
+if answer != "Alex":
+    print("Incorrect")
+else:
+    print("Correct")
+
+"""
+If it was an if statement, it would only run once, and so the user only has one opportunity to get it correct
+
+"""
+
+answer = input("Who ordered a cortado? ")
+while answer != "Alex":
+    print("Incorrect")
+    answer = input("Who ordered a cortado? ")
+else:
+    print("Correct")
+
+"""
+If the user doesn't answer with “Alex”, the while loop will initialise, and loop through the block until the user does answer with “Alex”.
+
+Can we see any issues with this specific code?
+
+The only thing that will loop is the block, which in this example is just line 148. If the user gets it wrong, this will just print “incorrect” forever because we don't give an opportunity for answer to change to “Alex”
+
+We need to give the opportunity for the condition to change, to eventually break the loop! By including the input again in the block, we can achieve this.
+"""
 
