@@ -168,50 +168,57 @@
 
 # #-------------------------------------------------------------------------
 
-# DICTIONARIES
+# # DICTIONARIES
 
-"""
-In real life, dictionaries hold words and their definitions in pairs. 
-In Python, dictionaries are collections of data. 
-This data is stored in KEY:VALUE pairs
-"""
+# """
+# In real life, dictionaries hold words and their definitions in pairs. 
+# In Python, dictionaries are collections of data. 
+# This data is stored in KEY:VALUE pairs
+# """
 
-capital_cities = {
-    "England" : "London", 
-    "Scotland" : "Edinburgh",
-    "Wales" : "Cardiff",
-    "Northern Ireland" : "Belfast",
-    "Ireland" : "Dublin"
-}
+# capital_cities = {
+#     "England" : "London", 
+#     "Scotland" : "Edinburgh",
+#     "Wales" : "Cardiff",
+#     "Northern Ireland" : "Belfast",
+#     "Ireland" : "Dublin"
+# }
 
-"""
-Dictionaries are wrapped in {} curly brackets
+# """
+# Dictionaries are wrapped in {} curly brackets
 
-Keys and pairs are split by : a colon
+# Keys and pairs are split by : a colon
 
-Elements are split by , a comma
+# Elements are split by , a comma
 
-Whereas lists let us look things up their values using a index, dictionaries let us look things up via the key.
+# Whereas lists let us look things up their values using a index, dictionaries let us look things up via the key.
 
-"""
+# """
 
-print(capital_cities["Ireland"])
+# print(capital_cities["Ireland"])
 
-""" 
-Dictionaries can't contain duplicates. Newer values will overwrite old ones. Unlike tuples, dictionaries are changeable. 
-"""
+# """ 
+# Dictionaries can't contain duplicates. Newer values will overwrite old ones. Unlike tuples, dictionaries are changeable. 
+# """
 
-capital_cities = {
-    "England" : "London", 
-    "Scotland" : "Edinburgh",
-    "Wales" : "Cardiff",
-    "Northern Ireland" : "Belfast",
-    "Ireland" : "Dublin",
-    "Wales" : "Swansea"
-}
+# capital_cities = {
+#     "England" : "London", 
+#     "Scotland" : "Edinburgh",
+#     "Wales" : "Cardiff",
+#     "Northern Ireland" : "Belfast",
+#     "Ireland" : "Dublin",
+#     "Wales" : "Swansea"
+# }
 
-print(capital_cities)
+# print(capital_cities)
 
-"""
+# """
+# DICTIONARY METHODS
 
-"""
+# There are lots of methods for dictionaries
+
+# """
+# #-------------------------------------------------------------------------
+
+# WHILE LOOPS - True and Break
+
