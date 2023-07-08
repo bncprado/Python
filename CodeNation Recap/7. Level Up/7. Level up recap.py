@@ -221,4 +221,44 @@
 # #-------------------------------------------------------------------------
 
 # WHILE LOOPS - True and Break
+# While loops can be used to run a block of code an indefinite amount of time
+
+
+###########################################################################
+
+# answer = input("Who ordered a cortado? ")
+
+# while answer != "Alex".lower(): #This loop will run until we meet a condition. If you keep giving the wrong answer, it will ask again and again until we meet the condition. When we meet the condition, the loop will BREAK
+#     print("incorrect")
+#     answer = input("Who ordered a cortado? ")
+# else:
+#     print("correct")
+
+###########################################################################    
+
+# # We can also use a while True loop. Because True is always True, the loop will always run. To stop the loop, we need to use the break keyword. 
+
+# answer = input("Who ordered a cortado? ")
+
+# while True: 
+#     if answer != "Alex".lower():
+#         print("incorrect")
+#         answer = input("Who ordered a cortado? ")
+#     else:
+#         break #the break keyword stops all iteration of the loop
+
+# # IN most cases, you won't use a while True loop. Having a specific condition to run under is much better practice. 
+# # However, while True loops are great listeners. Because they always start, you can be 100% sure your condition is being evaluated. They're used in error handling. 
+
+# #---------------------------------------------------------------------------------
+
+# TRY/EXCEPT
+""" 
+We are likely to encounter many errors in our coding journey, as we already did. Errors are a good thing to experience.
+
+If a program is asked to do something it can't do, it will usually stop itself. This is called a FATAL EXCEPTION. 
+
+If in a program we need a user to type a number we need to specify using casting
+
+"""
 
