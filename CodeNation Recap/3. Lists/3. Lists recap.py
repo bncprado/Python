@@ -12,7 +12,7 @@
 
 # Lists are stored within [] square brackets, with each item separated by a comma. To access the data inside the list, we use the variable name.
 
-# The items don't need to be on a new line, but it does make it more readable.Even though we wrote the list in different lines, when printing we get everthing in the same line. 
+# The items don't need to be on a new line, but it does make it more readable.Even though we wrote the list in different lines, when printing we get everything in the same line. 
 
 # Each item in this case is a string they'll all need their own set of quote marks.
 
