@@ -258,7 +258,26 @@ We are likely to encounter many errors in our coding journey, as we already did.
 
 If a program is asked to do something it can't do, it will usually stop itself. This is called a FATAL EXCEPTION. 
 
-If in a program we need a user to type a number we need to specify using casting
+If we want the user to type a specific type of data, we use CASTING as we did already. We do this to prevent user typing a "wrong" type of data. 
 
+The developer's job is to handle this exceptions well. A program that has errors and quit it's not interesting to the user. 
+
+For instance:
 """
 
+print("Type in two numbers to multiply them")
+while True:
+    try:
+        num1 = int(input("Number 1: "))
+        num2 = int(input("Number 2: "))
+        break
+    except:
+        print("Please use integers only")
+print(num1*num2)
+
+"""
+We've used a "while True" loop. This allows the user to try again if they get it wrong. If it can execute with no errors, we break the loop and carry on. If it tries to cast, and can't, we can set a custom exception. Rather than stopping, the user is told their mistake and, because of the loop, they can try again. This will cover every single kind of error. We can be more specific. 
+"""
+
+##########################################################################
+  
