@@ -40,11 +40,11 @@ current_time = datetime.datetime.now().time().hour
 
 def greetings():
     if current_time >= 0 and current_time < 12:
-        print ("Good morning. Welcome to Bruno Groceries.\n")
+        print ("\nGood morning. Welcome to Bruno Groceries.\n")
     elif current_time >= 12 and current_time < 18:
-        print ("Good afternoon. Welcome to Bruno Groceries.\n")
+        print ("\nGood afternoon. Welcome to Bruno Groceries.\n")
     else:
-        print ("Good evening. Welcome to Bruno Groceries.\n")
+        print ("\nGood evening. Welcome to Bruno Groceries.\n")
 
 def items_list():
     print("Here are the items we have available today\n")
@@ -57,6 +57,17 @@ greetings()
 
 items_list()
 
-shop_cart = {
+shop_cart_items = [
 
-}
+]
+
+while True:
+    shop_cart_items.append(input("Type the item you want to buy: ").capitalize())
+    try:
+        answer = input("Would you like to add more items? Type \"Yes\" or \"No\": ".lower())
+        answer == "yes" or answer == "no"
+        break
+    except:
+        ("Please, type \"Yes\" or \"no\"")
+
+print(shop_cart_items)
