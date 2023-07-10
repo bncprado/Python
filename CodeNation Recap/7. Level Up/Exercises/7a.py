@@ -19,21 +19,6 @@ shop_list = {
     'Orange': 0.75,
     'Milk': 2.49,
     'Bread': 1.99,
-    'Eggs': 2.99,
-    'Chicken': 5.99,
-    'Beef': 7.99,
-    'Pork': 6.99,
-    'Potato': 0.79,
-    'Tomato': 1.29,
-    'Onion': 0.89,
-    'Carrot': 0.99,
-    'Lettuce': 1.49,
-    'Cheese': 3.99,
-    'Yogurt': 2.79,
-    'Chocolate': 3.49,
-    'Ice cream': 4.99,
-    'Coffee': 4.49,
-    'Tea': 3.29
 }
 
 current_time = datetime.datetime.now().time().hour
@@ -57,9 +42,7 @@ greetings()
 
 items_list()
 
-shop_cart_items = [
-
-]
+shop_cart_items = []
 
 while True:
     shop_cart_items.append(input("Type the item you want to buy: ").capitalize())
