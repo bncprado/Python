@@ -40,6 +40,9 @@ So far, we've used space characters between numbers and operators (+, -, *, /, *
 
 """
 Write a program with three lines of code that performs the following arithmetical operations and displays the results (use the print() function to display the results):
+16 times 10
+48 divided by 5
+5 elevated to 3
 """
 print(16*10)
 print(48/5)
