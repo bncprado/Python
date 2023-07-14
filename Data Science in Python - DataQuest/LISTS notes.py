@@ -1,7 +1,9 @@
 list_a = [5,6,7,8,9]
 list_b = ["1", "2", "3", "4", "5"]
 list_cd = [[1,2,3,4,5],["a", "b", "c", "d", "e"]]
+list_e = [10,10,10,10,10,10,10,10,10.0]
 
+print(list_cd[0])
 # print(list_a[0])#prints first item of the list
 # print(list_b[0])#prints first item of the list
 # print(list_cd[1])#prints the second item (that is a list) of the list
@@ -10,13 +12,15 @@ list_cd = [[1,2,3,4,5],["a", "b", "c", "d", "e"]]
 
 
 # CONVERTING STRINGS INSIDE OF LISTS TO NUMBERS. 
-emptylist = []
-for strings in list_b:
-  emptylist.append(int(strings))
+# emptylist = []
+# for strings in list_b:
+#   emptylist.append(int(strings))
 
 
-print(sum(emptylist))
+#print(sum(emptylist))
+
+# print(sum(list_e)/len(list_e))
 
 
 
-
+# print(list_cd)
