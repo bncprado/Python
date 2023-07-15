@@ -3,7 +3,10 @@ list_b = ["1", "2", "3", "4", "5"]
 list_cd = [[1,2,3,4,5],["a", "b", "c", "d", "e"]]
 list_e = [10,10,10,10,10,10,10,10,10.0]
 
-print(list_cd[0])
+for x in list_a:
+    print(x)
+print(x)
+
 # print(list_a[0])#prints first item of the list
 # print(list_b[0])#prints first item of the list
 # print(list_cd[1])#prints the second item (that is a list) of the list
