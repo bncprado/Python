@@ -45,7 +45,7 @@ def greetings():
     else:
         print ("\nGood evening. Welcome to Bruno Groceries.\n")
 
-def items_list():
+# def items_list():
     print("Here are the items we have available today:\n")
     print("ITEMS    \tPRICE\n")
     for key, value in shop_list.items():
@@ -54,8 +54,11 @@ def items_list():
 
 greetings()
 
-items_list()
+# items_list()
 
 shop_cart_items = []
+
+for price in shop_list.values():
+    print(price)
 
 
