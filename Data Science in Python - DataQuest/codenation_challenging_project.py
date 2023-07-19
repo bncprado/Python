@@ -56,17 +56,32 @@ greetings()
 
 items_list()
 
-shop_cart_items = []
+shop_cart_items = [["Item"], [0]]
 quantity = 0
 
 while True:
-    what_want_to_buy = input("Please, type what you'd like to buy: ").capitalize()
-    how_many = int(input(f"Type how many {what_want_to_buy} you'd like to buy: "))
-    if what_want_to_buy in shop_list:
-        shop_cart_items.append(what_want_to_buy*how_many)
-        print(shop_cart_items)
-    else:
-        print("Item not in list")
-        print(shop_cart_items)
-        quit()
+    while True:
+        what_want_to_buy = input("Please, type what you'd like to buy: ").capitalize()
+        if what_want_to_buy not in shop_list:
+            print(f"{what_want_to_buy} is not in the list, please type it again.")
+        else:
+            break
+    while True:
+        try: 
+            how_many = int(input(f"Type the number of {what_want_to_buy.lower()}s you'd like to buy: "))
+            break
+        except:        
+            print("Please, type a number: ")
+    print(f"The total for {how_many}{what_want_to_buy} is {shop_list.items(what_want_to_buy)} ")
+
+    break
+print(shop_cart_items)
+    
+# if what_want_to_buy in shop_list:
+#     shop_cart_items.append(what_want_to_buy*how_many)
+#     print(shop_cart_items)
+# else:
+#     print("Item not in list")
+#     print(shop_cart_items)
+#     quit()
 
