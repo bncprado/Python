@@ -45,7 +45,7 @@ def greetings():
     else:
         print ("\nGood evening. Welcome to Bruno Groceries.\n")
 
-# def items_list():
+def items_list():
     print("Here are the items we have available today:\n")
     print("ITEMS    \tPRICE\n")
     for key, value in shop_list.items():
@@ -54,11 +54,19 @@ def greetings():
 
 greetings()
 
-# items_list()
+items_list()
 
 shop_cart_items = []
+quantity = 0
 
-for price in shop_list.values():
-    print(price)
-
+while True:
+    what_want_to_buy = input("Please, type what you'd like to buy: ").capitalize()
+    how_many = int(input(f"Type how many {what_want_to_buy} you'd like to buy: "))
+    if what_want_to_buy in shop_list:
+        shop_cart_items.append(what_want_to_buy*how_many)
+        print(shop_cart_items)
+    else:
+        print("Item not in list")
+        print(shop_cart_items)
+        quit()
 
