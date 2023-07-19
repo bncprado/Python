@@ -1,9 +1,9 @@
-shop_list = {
-    'Apple': 0.99,
-    'Banana': 0.5,
-    'Orange': 0.75,
-    'Milk': 2.49,
-    'Bread': 1.99,
-}
+"""how to multiply values using the key of a dictionary"""
 
-print(shop_list["Apple"])
+shop_list = {
+    'Apple': 3.99,
+    }
+
+how_many = 3
+
+print(shop_list['Apple']*how_many)

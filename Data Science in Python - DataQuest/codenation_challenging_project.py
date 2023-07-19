@@ -56,7 +56,7 @@ greetings()
 
 items_list()
 
-shop_cart_items = [["Item"], [0]]
+shop_cart_items = []
 quantity = 0
 
 while True:
@@ -72,7 +72,7 @@ while True:
             break
         except:        
             print("Please, type a number: ")
-    print(f"The total for {how_many}{what_want_to_buy} is {shop_list.items(what_want_to_buy)} ")
+    print(f"The total for {how_many} {what_want_to_buy.lower()}s is £{shop_list[what_want_to_buy]*how_many:.2f} ")
 
     break
 print(shop_cart_items)
