@@ -1,7 +1,9 @@
-"""Figuring out how to append lists inside lists"""
+shop_list = {
+    'Apple': 0.99,
+    'Banana': 0.5,
+    'Orange': 0.75,
+    'Milk': 2.49,
+    'Bread': 1.99,
+}
 
-list = [["item"], [0]]
-print(list)
-list[0].append("item2")
-list[1].append(25)
-print(list)
+print(shop_list["Apple"])
