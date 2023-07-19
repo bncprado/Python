@@ -10,7 +10,7 @@
 
 content_ratings = {'4+': 4433, '9+': 987, '12+': 1155, '17+': 622}
 
-print(4433 in content_ratings)
-print(987 in content_ratings)
+print(4433 in content_ratings) # output: False
+print(987 in content_ratings) # output: False
 
 #--------------------------------------------------------------------------------

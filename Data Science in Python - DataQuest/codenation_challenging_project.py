@@ -58,24 +58,35 @@ items_list()
 
 shop_cart_items = []
 quantity = 0
+book_of_orders = {
+    'Apple': 0,
+    'Banana': 0,
+    'Orange': 0,
+    'Milk': 0,
+    'Bread': 0,
+}
 
 while True:
     while True:
-        what_want_to_buy = input("Please, type what you'd like to buy: ").capitalize()
+        what_want_to_buy = input("\nPlease, type what you'd like to buy: ").capitalize()
         if what_want_to_buy not in shop_list:
-            print(f"{what_want_to_buy} is not in the list, please type it again.")
+            print(f"\n{what_want_to_buy} is not in the list, please type it again.")
         else:
             break
     while True:
         try: 
-            how_many = int(input(f"Type the number of {what_want_to_buy.lower()}s you'd like to buy: "))
+            how_many = int(input(f"\nType the number of {what_want_to_buy.lower()}s you'd like to buy: "))
             break
         except:        
-            print("Please, type a number: ")
-    print(f"The total for {how_many} {what_want_to_buy.lower()}s is £{shop_list[what_want_to_buy]*how_many:.2f} ")
+            print("\nPlease, type a number: ")
+    print(f"\nThe total for {how_many} {what_want_to_buy.lower()}s is £{shop_list[what_want_to_buy]*how_many:.2f} ")
+    book_of_orders[what_want_to_buy] += how_many
+    print(f"""
 
+Your cart has {book_of_orders[what_want_to_buy]} {book_of_orders.items()}""")
+    
     break
-print(shop_cart_items)
+
     
 # if what_want_to_buy in shop_list:
 #     shop_cart_items.append(what_want_to_buy*how_many)
