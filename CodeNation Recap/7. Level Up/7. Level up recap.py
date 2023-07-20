@@ -39,7 +39,7 @@
 # """
 # FALSY VALUES:
 # - Empty strings "" 
-# - Interget 0
+# - Integer 0
 # - Float 0.0
 # - Any other mathematical 0
 # - Empty collections
@@ -51,7 +51,7 @@
 
 # #-------------------------------------------------------------------------
 
-# #This code won't wrok as expected. It's looking to see if the value of "name" is the same as the boolean "True", which it won't be. One is a string and other is a boolean
+# #This code won't work as expected. It's looking to see if the value of "name" is the same as the boolean "True", which it won't be. One is a string and other is a boolean
 
 # print("What's your name?")
 # name = input (" > ")
