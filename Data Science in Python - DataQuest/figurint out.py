@@ -9,7 +9,12 @@ shop_inventory = {
 }
 
 while True:
-    which_item = input("\nWhich item? ").capitalize()
+    while True:
+        which_item = input("\nWhich item? ").capitalize()
+        if which_item not in shop_inventory:
+            print("Please, choose something that is in our inventory")
+        else:
+            break
     how_many = int(input("\nHow many? "))
     if which_item in shop_list:
         shop_list[which_item] += how_many
@@ -19,9 +24,9 @@ while True:
     print("ITEMS\t\tQTY\t\tTOTAL PRICE\n")
     overall_total = 0
     for key, value in shop_list.items():
-        print(f"{key}\t\t\t{value}\t\t\t£{shop_inventory[key]*value:.2f}")
+        print(f"{key}\t\t{value}\t\t£{shop_inventory[key]*value:.2f}")
         overall_total += shop_inventory[key]*value
-    print(f"\nOVERALL TOTAL: {overall_total:.2f}")
+    print(f"\nOVERALL TOTAL: £{overall_total:.2f}")
     print("")
 
     x = input("Do you want to continue? Type \"Y\" for yes or anything else to quit: ").capitalize()
