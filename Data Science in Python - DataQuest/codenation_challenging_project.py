@@ -1,8 +1,8 @@
 #importing "datetime" library to get time and use in our "greetings function"
 import datetime 
 
-#empty shop list that will be updated as user type what they want to add
-shop_list = {}
+#empty shop cart that will be updated as user type what they want to add
+shop_cart = {}
 
 # items we have available in our shop
 shop_inventory = {
@@ -17,6 +17,8 @@ shop_inventory = {
 current_time = datetime.datetime.now().time().hour
 
 name = input("Please, tell us your name: ")
+
+# this function gets the time of the day and print the appropriate greeting for the current time
 def greetings():
     if current_time >= 0 and current_time < 12:
         print (f"\nGood morning {name}. Welcome to Bruno Groceries.\n")
@@ -25,6 +27,7 @@ def greetings():
     else:
         print (f"\nGood evening {name}. Welcome to Bruno Groceries.\n")
 
+# function that shows the user the available items and their prices in a friendly-reading table
 def items_list():
     print("\nHere are the items we have available today:\n")
     print("ITEMS    \tPRICE\n")
@@ -37,8 +40,8 @@ greetings()
 items_list()
 
 
-while True:
-    while True:
+while True: #the entire loop for adding products to the shop_list 
+    while True: 
         which_item = input("\nPlease type the item you want to buy: ").capitalize()
         if which_item not in shop_inventory:
             print(f"\nSorry {name}, we don't have {which_item} today. Please, try something from our inventory.")
@@ -51,14 +54,14 @@ while True:
             break
         except:
             print(f"I'm sorry {name} but you have to type a number: ")
-    if which_item in shop_list:
-        shop_list[which_item] += how_many
-    elif which_item not in shop_list:
-        shop_list[which_item.capitalize()] = how_many  
+    if which_item in shop_cart:
+        shop_cart[which_item] += how_many
+    elif which_item not in shop_cart:
+        shop_cart[which_item.capitalize()] = how_many  
     print("")
     print("ITEMS\t\tQTY\t\tTOTAL PRICE\n")
     overall_total = 0
-    for key, value in shop_list.items():
+    for key, value in shop_cart.items():
         print(f"{key}\t\t{value}\t\t£{shop_inventory[key]*value:.2f}")
         overall_total += shop_inventory[key]*value
     print(f"\nOVERALL TOTAL: £{overall_total:.2f}")
