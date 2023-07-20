@@ -1,3 +1,6 @@
+# This project was imported to dataquest python's folder cause I wasn't able to finish this project with the knowledge I had prior to dataquest's free course. 
+# Now I'm going to create a dedicated folder for this project
+
 #importing "datetime" library to get time and use in our "greetings function"
 import datetime 
 
