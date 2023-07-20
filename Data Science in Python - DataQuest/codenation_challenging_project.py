@@ -1,33 +1,11 @@
-#
+#importing "datetime" library to get time and use in our "greetings function"
+import datetime 
 
-""" 
-ACTIVITY
+#empty shop list that will be updated as user type what they want to add
+shop_list = {}
 
-Create a shop dictionary, listing item as the key and the price as the value
-
-Create a program which allows users to purchase from you store. Users should be able to input the item they want, and how many of them they wish to buy. 
-
-Display a total cost from this information. 
-
-Allow the user to keep purchasing items from your shop until they are done. Update the total as necessary
-"""
-
-""" 
-ACTIVITY
-
-Create a shop dictionary, listing item as the key and the price as the value
-
-Create a program which allows users to purchase from you store. Users should be able to input the item they want, and how many of them they wish to buy. 
-
-Display a total cost from this information. 
-
-Allow the user to keep purchasing items from your shop until they are done. Update the total as necessary
-"""
-
-
-import datetime
-
-shop_list = {
+# items we have available in our shop
+shop_inventory = {
     'Apple': 0.99,
     'Banana': 0.5,
     'Orange': 0.75,
@@ -35,20 +13,22 @@ shop_list = {
     'Bread': 1.99,
 }
 
+#this variable gets current time of the day to be used in the greetings function
 current_time = datetime.datetime.now().time().hour
 
+name = input("Please, tell us your name: ")
 def greetings():
     if current_time >= 0 and current_time < 12:
-        print ("\nGood morning. Welcome to Bruno Groceries.\n")
+        print (f"\nGood morning {name}. Welcome to Bruno Groceries.\n")
     elif current_time >= 12 and current_time < 18:
-        print ("\nGood afternoon. Welcome to Bruno Groceries.\n")
+        print (f"\nGood afternoon {name}. Welcome to Bruno Groceries.\n")
     else:
-        print ("\nGood evening. Welcome to Bruno Groceries.\n")
+        print (f"\nGood evening {name}. Welcome to Bruno Groceries.\n")
 
 def items_list():
-    print("Here are the items we have available today:\n")
+    print("\nHere are the items we have available today:\n")
     print("ITEMS    \tPRICE\n")
-    for key, value in shop_list.items():
+    for key, value in shop_inventory.items():
         print(f"{key}     \t£{value:.2f}")
     print("")
 
@@ -56,43 +36,52 @@ greetings()
 
 items_list()
 
-shop_cart_items = []
-quantity = 0
-book_of_orders = {
-    'Apple': 0,
-    'Banana': 0,
-    'Orange': 0,
-    'Milk': 0,
-    'Bread': 0,
-}
 
 while True:
     while True:
-        what_want_to_buy = input("\nPlease, type what you'd like to buy: ").capitalize()
-        if what_want_to_buy not in shop_list:
-            print(f"\n{what_want_to_buy} is not in the list, please type it again.")
+        which_item = input("\nPlease type the item you want to buy: ").capitalize()
+        if which_item not in shop_inventory:
+            print(f"\nSorry {name}, we don't have {which_item} today. Please, try something from our inventory.")
+            items_list()
         else:
             break
     while True:
         try: 
-            how_many = int(input(f"\nType the number of {what_want_to_buy.lower()}s you'd like to buy: "))
+            how_many = int(input(f"\nHow many {which_item}s would you like to buy {name}? "))
             break
-        except:        
-            print("\nPlease, type a number: ")
-    print(f"\nThe total for {how_many} {what_want_to_buy.lower()}s is £{shop_list[what_want_to_buy]*how_many:.2f} ")
-    book_of_orders[what_want_to_buy] += how_many
-    print(f"""
+        except:
+            print(f"I'm sorry {name} but you have to type a number: ")
+    if which_item in shop_list:
+        shop_list[which_item] += how_many
+    elif which_item not in shop_list:
+        shop_list[which_item.capitalize()] = how_many  
+    print("")
+    print("ITEMS\t\tQTY\t\tTOTAL PRICE\n")
+    overall_total = 0
+    for key, value in shop_list.items():
+        print(f"{key}\t\t{value}\t\t£{shop_inventory[key]*value:.2f}")
+        overall_total += shop_inventory[key]*value
+    print(f"\nOVERALL TOTAL: £{overall_total:.2f}")
+    print("")
 
-Your cart has {book_of_orders[what_want_to_buy]} {book_of_orders.items()}""")
-    
-    break
+    x = input(f"Do you want to keep shopping {name}? Type \"Y\" than ENTER to keep shopping or anything else to go for payment").capitalize()
+    if x == "Y":
+        print("")
+        items_list()
+        continue
+    else:
+        break
 
-    
-# if what_want_to_buy in shop_list:
-#     shop_cart_items.append(what_want_to_buy*how_many)
-#     print(shop_cart_items)
-# else:
-#     print("Item not in list")
-#     print(shop_cart_items)
-#     quit()
+print(f"""
+THE TOTAL FOR YOUR BASKET IS £{overall_total:.2f}.
+
+Thank you for shopping with us, {name}.""")
+
+if current_time >= 0 and current_time < 12:
+        print ("\nHave a great day.\n")
+elif current_time >= 12 and current_time < 18:
+        print ("\nEnjoy your afternoon.\n")
+else:
+    print ("\nHave a good evening\n")
+
 
