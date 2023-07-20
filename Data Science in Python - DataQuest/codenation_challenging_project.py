@@ -67,7 +67,7 @@ while True: #the entire loop for adding products to the shop_list
     print(f"\nOVERALL TOTAL: £{overall_total:.2f}")
     print("")
 
-    x = input(f"Do you want to keep shopping {name}? Type \"Y\" than ENTER to keep shopping or anything else to go for payment").capitalize()
+    x = input(f"Do you want to keep shopping {name}?\nType \"Y\" then ENTER to keep shopping or anything else to go for payment: ").capitalize()
     if x == "Y":
         print("")
         items_list()
