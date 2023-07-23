@@ -191,22 +191,20 @@
 # SPECIFYING A TYPE and forcing it
 
 class Item:
-  def __init__(self, name: str, price: float, quantity=0): #When we pass float, it's ok to use integers. For quantity, we don't have to specify the data type cause we already passed an "int" so Python will assume it must be an "int" automatically
+  def __init__(self, name, price, quantity): #When we pass float, it's ok to use integers. For quantity, we don't have to specify the data type cause we already passed an "int" so Python will assume it must be an "int" automatically
 
-    assert name != str(name), f"the name must be a string"
-    assert price != float(price), f"the price must be a number with two decimals"
-    assert quantity != int(quantity), f"Quantity must be an integer number"
+    assert name != str, f"the name must be a string"
+    assert price != float, f"the price must be a number with two decimals"
+    assert quantity != int, f"Quantity must be an integer number"
 
     self.name = name
     self.price = price
     self.quantity = quantity
 
   def calculate_total_price(self): # when you create a function inside an object, we call them METHODS.
-    return self.price * self.quantity
+    return print(f'{self.price * self.quantity:.2f}')
 
-item1 = Item(1, "100", 1) # I still can pass a different value
+iPhone = Item("iPhone", 799.99, 100)
+iPhone.calculate_total_price()
 
-item2 = Item("Laptop", "1000", 3)
-
-item3 = Item(1, "name", 1.11)
-
+print(print.__dict__)
