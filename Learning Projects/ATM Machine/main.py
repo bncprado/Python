@@ -16,5 +16,9 @@ Ensure the user enters the correct pin, and do not allow a withdrawal if there a
 from atm_machine import BankAccount
 
 acc1 = BankAccount("Bruno", 0, 0, 0000)
-acc1.deposit("bruno")
-acc1.print_statement()
+acc1.deposit()
+
+
+
+
+
