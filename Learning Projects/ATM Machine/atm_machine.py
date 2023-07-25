@@ -9,27 +9,37 @@ class BankAccount:
        while True:
         attempts = 0
         while True:
-          user_pass = int(input("Please type your password: "))
+          user_pass = int(input("\nPlease type your password: "))
           if user_pass != self.password and attempts < 3:
             attempts += 1
-            print(f"You have {3 - attempts} more attempts")
+            print(f"\nYou have {3 - attempts} more attempts")
           if user_pass != self.password and attempts == 3:
-             print("Program will quit.")
+             print("\nProgram will quit.")
              quit()
           elif user_pass == self.password:
-            print(f"Welcome {self.name}.")
+            print(f"\nWelcome {self.name}.")
             break
         break
+
+    def check_if_number(self):
+      pass
 
     def deposit(self):
       self.password_check() #omg I finally found a way of executing a defined method inside a new method
       while True:
         try:
-          figure = int(input("Please, type the amount you want to deposit: "))  
-          self.balance = self.balance + figure
+          figure = float(input("\nPlease, type the amount you want to deposit: "))  
+          while figure <= 0:
+            print("\nPlease type a number bigger than 0")
+            figure = float(input("\nPlease, type the amount you want to deposit: "))
+          else:  
+            self.balance = self.balance + figure
+            print(f"Your current balance is {self.balance}")
+            input("Deposit more? \n1. Yes\n2.No")
           break
         except:
-          print("You must type a number")
+          print("\nYou must type a number")
+          
       
 
         
@@ -55,7 +65,7 @@ class BankAccount:
         #     quit()          
             
     def withdrawal(self):
-      
+      self.password_check
       
       pass    
 
