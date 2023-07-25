@@ -5,7 +5,7 @@ class BankAccount:
         self.balance = balance
         self.password = pin
 
-    def password_check(self):
+    def password_check(self): 
        while True:
         attempts = 0
         while True:
@@ -22,6 +22,7 @@ class BankAccount:
         break
 
     def deposit(self):
+      self.password_check() #omg I finally found a way of executing a defined method inside a new method
       while True:
         try:
           figure = int(input("Please, type the amount you want to deposit: "))  
@@ -54,6 +55,7 @@ class BankAccount:
         #     quit()          
             
     def withdrawal(self):
+      
       
       pass    
 
