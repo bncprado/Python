@@ -20,7 +20,7 @@ class BankAccount:
                     print("\nProgram will quit.")
                     quit()
                 elif user_pass == self.password:
-                    print(f"\nAccess granted {self.name}.")
+                    print(f"\nAccess granted, {self.name}.")
                     break
             break
 
@@ -38,7 +38,6 @@ class BankAccount:
                 else:
                     self.balance = self.balance + figure
                     print(f"\nYour new balance is £{self.balance:.2f}")
-                    print("\nThanks for your visit. Have a great day")
                     break
             except:
                 print("\nYou must type a number")
@@ -68,6 +67,43 @@ class BankAccount:
 
     def print_statement(self):
         print(f"\nYour current balance is £{self.balance:.2f}")
+    
+    def atm_operation(self):
+        while True:
+            print("""
+PLEASE, SELECT THE OPERATION:
+              
+1. DEPOSIT      3. CHECK BALANCE
+              
+2. WITHDRAW     4. EXIT
+              """)
+            numbers = [1,2,3,4]
+            while True:
+                try:
+                    operation = int(input("Please, type the number of operation and then ENTER to confirm: \n"))  
+                    if operation not in numbers:
+                        print("\nOnly numbers from 1 to 4 are valid options.\n")
+                        continue
+                    else:
+                        break  
+                except:
+                    print("\nOnly numbers from 1 to 4 are valid options.\n")
+            while True:
+                if operation == 1:
+                    self.deposit()
+                    break
+                elif operation == 2:
+                    self.withdrawal()
+                    break
+                elif operation == 3:
+                    self.print_statement()
+                    break
+                elif operation == 4:
+                    print("Thanks for using Bruno Bank ATM Machines today.")
+                    quit()
+                elif operation not in numbers:
+                    continue
+
 
     def atm_machine(self):
        # this variable gets current time of the day to be used in the greetings function
@@ -82,4 +118,4 @@ class BankAccount:
             else:
                 print(f"\nGood evening {self.name}. Welcome to Bruno Bank.")
         greetings()
-        self.password_check()
+        self.atm_operation()
