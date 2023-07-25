@@ -1,3 +1,6 @@
+import datetime
+
+
 class BankAccount:
     def __init__(self, name, deposit, balance, pin):
         self.name = name
@@ -17,7 +20,7 @@ class BankAccount:
                     print("\nProgram will quit.")
                     quit()
                 elif user_pass == self.password:
-                    print(f"\Hello again {self.name}.")
+                    print(f"\nAccess granted {self.name}.")
                     break
             break
 
@@ -49,10 +52,12 @@ class BankAccount:
                     input("\nPlease, type the amount you want to withdraw: "))
                 while figure <= 0:
                     print("\nPlease type a number bigger than 0")
-                    figure = float(input("\nPlease, type the amount you want to withdraw: "))
+                    figure = float(
+                        input("\nPlease, type the amount you want to withdraw: "))
                 else:
                     if self.balance - figure < 0:
-                        print(f"You don't have enough balance to withdraw £{figure:.2f}")
+                        print(
+                            f"You don't have enough balance to withdraw £{figure:.2f}")
                         break
                     else:
                         self.balance = self.balance - figure
@@ -62,4 +67,19 @@ class BankAccount:
                 print("\nYou must type a number")
 
     def print_statement(self):
-        print(f"\nYour balance is £{self.balance:.2f}")
+        print(f"\nYour current balance is £{self.balance:.2f}")
+
+    def atm_machine(self):
+       # this variable gets current time of the day to be used in the greetings function
+        current_time = datetime.datetime.now().time().hour
+
+        # this function gets the time of the day and print the appropriate greeting for the current time
+        def greetings():
+            if current_time >= 0 and current_time < 12:
+                print(f"\nGood morning {self.name}. Welcome to Bruno Bank.")
+            elif current_time >= 12 and current_time < 18:
+                print(f"\nGood afternoon {self.name}. Welcome to Bruno Bank.")
+            else:
+                print(f"\nGood evening {self.name}. Welcome to Bruno Bank.")
+        greetings()
+        self.password_check()
