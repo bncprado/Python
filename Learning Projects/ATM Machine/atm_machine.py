@@ -5,28 +5,30 @@ class BankAccount:
         self.balance = balance
         self.password = pin
 
-    def deposit(self):
-      while True:
+    def password_check(self):
+       while True:
         attempts = 0
         while True:
           user_pass = int(input("Please type your password: "))
           if user_pass != self.password and attempts < 3:
             attempts += 1
-            print(attempts)
+            print(f"You have {3 - attempts} more attempts")
           if user_pass != self.password and attempts == 3:
-             print("program will quit")
+             print("Program will quit.")
              quit()
           elif user_pass == self.password:
             print(f"Welcome {self.name}.")
             break
         break
+
+    def deposit(self):
       while True:
         try:
           figure = int(input("Please, type the amount you want to deposit: "))  
           self.balance = self.balance + figure
           break
         except:
-          print("Type a number danadinho")
+          print("You must type a number")
       
 
         
@@ -52,6 +54,7 @@ class BankAccount:
         #     quit()          
             
     def withdrawal(self):
+      
       pass    
 
     def print_statement(self):
