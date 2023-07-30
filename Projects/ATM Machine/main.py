@@ -18,3 +18,4 @@ from atm_machine import BankAccount
 acc1 = BankAccount("Bruno", 0, 0, 1234)
 acc1.atm_machine()
 
+acc1.name

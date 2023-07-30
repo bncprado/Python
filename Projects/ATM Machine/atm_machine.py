@@ -104,7 +104,6 @@ PLEASE, SELECT THE OPERATION:
                 elif operation not in numbers:
                     continue
 
-
     def atm_machine(self):
        # this variable gets current time of the day to be used in the greetings function
         current_time = datetime.datetime.now().time().hour
