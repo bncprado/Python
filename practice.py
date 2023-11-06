@@ -96,12 +96,23 @@
 
 ############################################## MORE ABOUT TUPLES
 
-tuple3rd = 1,2,3,4
-one, two, three, four = tuple3rd
-print(tuple3rd)
+# tuple3rd = 1,2,3,4
+# one, two, three, four = tuple3rd #that's the same as one = tuple[0] and so on
+# print(tuple3rd)
+# print(one)
+# print(two)
+# print(three)
+# print(four)
+# one, two, three, four, five = tuple3rd
+# print(five) #output: ... ValueError: not enough values to unpack (expected 5, got 4)
+
+############################################## MORE ABOUT TUPLES #we can use the same technique to unpack lists
+
+a_list = [0,1,2,3]
+zero, one, two, three = a_list #that's the same as zero = a_list[0] and so on
+print(a_list)
+print(zero)
 print(one)
 print(two)
 print(three)
-print(four)
-one, two, three, four, five = tuple3rd
-print(five)
+
