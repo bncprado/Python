@@ -76,8 +76,32 @@
 # print(type(twonumbers(1,2))) #output: tuple
 
 ############################################## TUPLES
-umatuple = (1,2)
-umatuple_tambem = 1,2
+# a_tuple = (1,2)
+# also_a_tuple = 1,2
 
-print(type(umatuple)) #output: <class 'tuple'>
-print(type(umatuple_tambem)) #output: <class 'tuple'>
+# print(type(a_tuple)) #output: <class 'tuple'>
+# print(type(also_a_tuple)) #output: <class 'tuple'>
+
+# # Every time we create a variable with values separated by comma (,), it'll automatically create a tuple.
+
+# def new_func(number1, number2):
+#   return number1, number2 #it will automatically return a tuple, cause we separated the values by a comma
+
+# print(type(new_func(1,2))) #output: <class 'tuple'>
+
+# def new_func(number1, number2): #now, the function new_func was redefined and it's returning a list
+#   return [number1, number2]
+
+# print(type(new_func(1,2))) #output: <class 'list'>
+
+############################################## MORE ABOUT TUPLES
+
+tuple3rd = 1,2,3,4
+one, two, three, four = tuple3rd
+print(tuple3rd)
+print(one)
+print(two)
+print(three)
+print(four)
+one, two, three, four, five = tuple3rd
+print(five)
