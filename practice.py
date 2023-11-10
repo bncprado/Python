@@ -108,11 +108,17 @@
 
 ############################################## MORE ABOUT TUPLES #we can use the same technique to unpack lists
 
-a_list = [0,1,2,3]
-zero, one, two, three = a_list #that's the same as zero = a_list[0] and so on
-print(a_list)
-print(zero)
-print(one)
-print(two)
-print(three)
+# a_list = [0,1,2,3]
+# zero, one, two, three = a_list #that's the same as zero = a_list[0] and so on
+# print(a_list)
+# print(zero)
+# print(one)
+# print(two)
+# print(three)
+
+############################################## Loop in lists of lists
+list_of_lists = [['name', 'age', 'nationality'],['Bruno', 'fourty-two', 'Brazilian']]
+
+for row in list_of_lists:
+  print(row[0])
 
