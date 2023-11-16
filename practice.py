@@ -117,8 +117,24 @@
 # print(three)
 
 ############################################## Loop in lists of lists
-list_of_lists = [['name', 'age', 'nationality'],['Bruno', 'fourty-two', 'Brazilian']]
+# list_of_lists = [['name', 'age', 'nationality'],['Bruno', 'fourty-two', 'Brazilian']]
 
-for row in list_of_lists:
-  print(row[0])
+# for row in list_of_lists:
+#   print(row[0])
+
+##############################################
+vazia=[]
+lista = [['Photo Editor & Candy Camera & Grid & ScrapBook', 'ART_AND_DESIGN', '4.1', '159', '19M', '10,000+', 'Free', '0', 'Everyone', 'Art & Design', 'January 7, 2018', '1.0.0', '4.0.3 and up'],['Photo Editor & Candy Camera & Grid & ScrapBook', 'ART_AND_DESIGN', '4.1', '159', '19M', '10,000+', 'Free', '0', 'Everyone', 'Art & Design', 'January 7, 2018', '1.0.0', '4.0.3 and up'],['Photo Editor & Candy Camera & Grid & ScrapBook', 'ART_AND_DESIGN', '4.1', '159', '19M', '10,000+', 'Free', '0', 'Everyone', 'Art & Design', 'January 7, 2018', '1.0.0', '4.0.3 and up'],['Photo Editor & Candy Camera & Grid & ScrapBook', 'ART_AND_DESIGN', '4.1', '159', '19M', '10,000+', 'Free', '0', 'Everyone', 'Art & Design', 'January 7, 2018', '1.0.0', '4.0.3 and up'],['Photo Editor & Candy Camera & Grid & ScrapBook', 'ART_AND_DESIGN', '4.1', '159', '19M', '10,000+', 'Free', '0', 'Everyone', 'Art & Design', 'January 7, 2018', '1.0.0', '4.0.3 and up']]
+
+print(len(lista))
+for row in lista:
+  name = row[0]
+  review = row[3]
+  if name == 'Photo Editor & Candy Camera & Grid & ScrapBook' and name not in vazia:
+    vazia.append(row)
+
+print(len(vazia))
+
+
+
 

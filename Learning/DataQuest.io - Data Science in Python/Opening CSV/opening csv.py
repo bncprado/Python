@@ -7,13 +7,30 @@ ios_data = list(read_file_ios)
 android_data = list(read_file_android)
 
 
-import string
-
-roman_characters = list(string.ascii_uppercase)
-
-print(roman_characters)
 
 
+
+# if 'Installs' in android_data[0]:
+#   print('\nyes\n')
+
+# del android_data[0]
+
+# if 'Installs' in android_data[0]:
+#   print('NOT ANYMORE')
+
+
+# import string
+
+# roman_characters = list(string.ascii_uppercase)
+
+# non_roman = "爱奇艺"
+# a = []
+
+# for row in roman_characters:
+#   if non_roman not in roman_characters:
+#     a.append(non_roman)
+  
+# print(a)
 
 # for row in ios_data[:1]:
 #   name = row[1]
