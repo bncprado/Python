@@ -36,17 +36,19 @@ android_data = list(read_file_android)
 #   name = row[1]
 #   print(name)
 
-# def explore_data(dataset, start, end, rows_and_columns=False):
-#     dataset_slice = dataset[start:end]    
-#     for row in dataset_slice:
-#         print(row)
-#         print('\n') # adds a new (empty) line after each row
+def explore_data(dataset, start, end, rows_and_columns=False):
+    dataset_slice = dataset[start:end]    
+    for row in dataset_slice:
+        print(row)
+        print('\n') # adds a new (empty) line after each row
 
-#     if rows_and_columns:
-#         print('Number of rows:', len(dataset))
-#         print('Number of columns:', len(dataset[0]))
+    if rows_and_columns:
+        print('Number of rows:', len(dataset))
+        print('Number of columns:', len(dataset[0]))
 
-# explore_data(android_data,0,1, True)
+for row in ios_data[:15]:
+    print(row[1])
+
 
 # free_ios_apps = []
 # for row in ios_data[1:]:
