@@ -152,9 +152,13 @@
 
 # print(check_char(name))
 
+fruits_prices = {
+    'watermelon': 3.00,
+    'apple': 1.00,
+    'banana': 0.75,
+    'orange': 1.25,
+    'grape': 2.50,
+    }
 
+print(sorted(fruits_prices))
 
-my_list = [1, 2, 3, 4, 5]
-
-for item in my_list:
-    print(item)

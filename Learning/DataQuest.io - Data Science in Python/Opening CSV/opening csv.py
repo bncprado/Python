@@ -7,7 +7,7 @@ ios_data = list(read_file_ios)
 android_data = list(read_file_android)
 
 
-
+print(len(ios_data))
 
 
 # if 'Installs' in android_data[0]:
