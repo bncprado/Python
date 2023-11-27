@@ -152,13 +152,46 @@
 
 # print(check_char(name))
 
-fruits_prices = {
-    'watermelon': 3.00,
-    'apple': 1.00,
-    'banana': 0.75,
-    'orange': 1.25,
-    'grape': 2.50,
-    }
+# fruits_prices = {
+#     'watermelon': 3.00,
+#     'apple': 1.00,
+#     'banana': 0.75,
+#     'orange': 1.25,
+#     'grape': 2.50,
+#     }
 
-print(sorted(fruits_prices))
+# print(sorted(fruits_prices))
+
+############################################### split method
+
+# name = '1957-1959'
+# name = name.split('-') #it removes the chosen char and splits the rest into a list
+# print(name)
+
+############################################### converting list of strings to int
+
+# name = '1957-1959'
+# name = name.split('-') #it removes the chosen char and splits the rest into a list
+# soma=0
+# for x in name:
+#   x=int(x)
+#   soma+=x
+
+# soma= round(soma/len(name))
+
+# print(soma)
+
+############################################### using type in if statements
+
+number = 1
+
+# print(type(number))
+if isinstance(number, int):
+    print('deu certo')
+else:
+    print('fudeu')
+
+
+
+
 
