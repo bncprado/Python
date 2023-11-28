@@ -183,15 +183,42 @@
 
 ############################################### using type in if statements
 
-number = 1
+# number = 1
 
-# print(type(number))
-if isinstance(number, int):
-    print('deu certo')
-else:
-    print('fudeu')
-
-
+# # print(type(number))
+# if isinstance(number, int):
+#     print('deu certo')
+# else:
+#     print('fudeu')
 
 
+############################################## for loop with dictionaries
 
+# dict = {
+#     'orange': 4,
+#     'banana': 4,
+#     'apple': 2
+# }
+
+# for x in dict:
+#   print(x)
+# """OUTPUT:
+# orange
+# banana
+# apple
+# """
+
+# print(dict.items()) #OUTPUT: dict_items([('orange', 4), ('banana', 4), ('apple', 2)])
+
+# for key, value in dict.items():
+#       print(f"{key} = {value}")
+
+
+
+# ############################################### merging lists
+
+# list1 = [1,2,3]
+# list2 = [4,5,6]
+# merged = list1+list2
+
+# print(merged) #OUTPUT: [1, 2, 3, 4, 5, 6]
