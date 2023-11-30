@@ -239,3 +239,11 @@ list1 = [-1,5,9,0,-3,12]
 
 print(min(list1))
 print(max(list1))
+
+dict1 = {'Number1': 1,
+         'Number2': 2,
+         'Number0': 3,
+         'Number-1': 5}
+
+print(min(dict1))
+print(max(dict1))
