@@ -225,7 +225,7 @@
 
 
 ################################################### datetime
-import datetime as dt
+import datetime as dt #renaming datetime module cause datetime is the name of module and class
 
 datet = dt.datetime(1980,11,12, 17, 50, 51) #year, month, day, hour, minute, second
 
