@@ -225,9 +225,17 @@
 
 
 ################################################### datetime
-import datetime as dt #renaming datetime module cause datetime is the name of module and class
+# import datetime as dt #renaming datetime module cause datetime is the name of module and class
 
-datet = dt.datetime(1980,11,12, 17, 50, 51) #year, month, day, hour, minute, second
+# date_variable = dt.datetime(1980,11,12, 17, 50, 51) #year, month, day, hour, minute, second
 
-print(datet)
-print(datet.day, datet.month, datet.year, datet.hour, datet.minute, datet.second)
+# print(date_variable)
+# print(date_variable.day, date_variable.month, date_variable.year, date_variable.hour, date_variable.minute, date_variable.second)
+
+################################################### min and max functions
+
+list1 = [-1,5,9,0,-3,12]
+
+
+print(min(list1))
+print(max(list1))
