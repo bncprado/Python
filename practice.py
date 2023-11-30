@@ -215,10 +215,19 @@
 
 
 
-# ############################################### merging lists
+# # ############################################### merging lists
 
 # list1 = [1,2,3]
 # list2 = [4,5,6]
 # merged = list1+list2
 
 # print(merged) #OUTPUT: [1, 2, 3, 4, 5, 6]
+
+
+################################################### datetime
+import datetime as dt
+
+datet = dt.datetime(1980,11,12, 17, 50, 51) #year, month, day, hour, minute, second
+
+print(datet)
+print(datet.day, datet.month, datet.year, datet.hour, datet.minute, datet.second)
