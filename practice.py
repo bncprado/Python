@@ -276,11 +276,13 @@ import numpy
 
 ios_new = numpy.array(ios_data)
 
-# print(ios_new[0]) #prints the entire row 0
-# print(ios_new[0,0]) #prints the row 0, column 0
-# print(ios_new[:,0]) #prints the entire column 0
-# print(ios_new[:,:]) #prints all rows and columns
-# print(ios_new[:1,:10]) #prints row 0, columns from 0 to 9
-# print(ios_new[:3,:3]) #prints row 0 to 2, columns from 0 to 2
+print(ios_new[0]) #prints the entire row 0
+print(ios_new[0,0]) #prints the row 0, column 0
+print(ios_new[:,0]) #prints the entire column 0
+print(ios_new[:,:]) #prints all rows and columns
+print(ios_new[:1,:10]) #prints row 0, columns from 0 to 9
+print(ios_new[:3,:3]) #prints row 0 to 2, columns from 0 to 2
 print(ios_new[:,[1,4,5]]) #prints all rows, columns from 1,4 and 5  
+print(ios_new[[0,4,5],:]) #prints rows 0,4,5 and all columns
+print(ios_new[[0,1,2],[0,1,2]]) #prints row 0, column 0; row 1, column1; row2, column2 
   
