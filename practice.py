@@ -234,16 +234,33 @@
 
 ################################################### min and max functions
 
-list1 = [-1,5,9,0,-3,12]
+# list1 = [-1,5,9,0,-3,12]
 
 
-print(min(list1))
-print(max(list1))
+# print(min(list1))
+# print(max(list1))
 
-dict1 = {'Number1': 1,
-         'Number2': 2,
-         'Number0': 3,
-         'Number-1': 5}
+# dict1 = {'Number1': 1,
+#          'Number2': 2,
+#          'Number0': 3,
+#          'Number-1': 5}
 
-print(min(dict1))
-print(max(dict1))
+# print(min(dict1))
+# print(max(dict1))
+
+################################################## looping dictionaries again
+
+sample_dict = {
+                'apple': 2, 
+                'banana': 4, 
+                'orange': 6
+               }
+
+for x in sample_dict:
+  print(x, sample_dict[x]) #first will be the key and second the value
+
+for x in sample_dict: # improved way of printing
+  print(f"Dict Key: {x.capitalize()}\nDict Value: {sample_dict[x]}\n")
+
+  
+  
