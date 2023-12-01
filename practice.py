@@ -250,17 +250,37 @@
 
 ################################################## looping dictionaries again
 
-sample_dict = {
-                'apple': 2, 
-                'banana': 4, 
-                'orange': 6
-               }
+# sample_dict = {
+#                 'apple': 2, 
+#                 'banana': 4, 
+#                 'orange': 6
+#                }
 
-for x in sample_dict:
-  print(x, sample_dict[x]) #first will be the key and second the value
+# for x in sample_dict:
+#   print(x, sample_dict[x]) #first will be the key and second the value
 
-for x in sample_dict: # improved way of printing
-  print(f"Dict Key: {x.capitalize()}\nDict Value: {sample_dict[x]}\n")
+# for x in sample_dict: # improved way of printing
+#   print(f"Dict Key: {x.capitalize()}\nDict Value: {sample_dict[x]}\n")
 
-  
+################################################## introducing numpy
+
+from csv import reader
+opened_file_ios = open('D:\Coding\Python\Learning\DataQuest.io - Data Science in Python\Opening CSV\AppleStore.csv', encoding='utf8')
+opened_file_android = open('D:\Coding\Python\Learning\DataQuest.io - Data Science in Python\Opening CSV\googleplaystore.csv', encoding='utf8')
+read_file_ios = reader(opened_file_ios)
+read_file_android = reader(opened_file_android)
+ios_data = list(read_file_ios)
+android_data = list(read_file_android)
+
+import numpy
+
+ios_new = numpy.array(ios_data)
+
+# print(ios_new[0]) #prints the entire row 0
+# print(ios_new[0,0]) #prints the row 0, column 0
+# print(ios_new[:,0]) #prints the entire column 0
+# print(ios_new[:,:]) #prints all rows and columns
+# print(ios_new[:1,:10]) #prints row 0, columns from 0 to 9
+# print(ios_new[:3,:3]) #prints row 0 to 2, columns from 0 to 2
+print(ios_new[:,[1,4,5]]) #prints all rows, columns from 1,4 and 5  
   
