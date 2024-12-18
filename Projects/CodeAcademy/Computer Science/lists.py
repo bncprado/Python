@@ -79,3 +79,5 @@ Use square brackets ([ and ]) to access the 4th employee from the list employees
 employees = ["Michael", "Dwight", "Jim", "Pam", "Ryan", "Andy", "Robert"]
 
 employee_four = employees[3]
+
+print(employees[4])
